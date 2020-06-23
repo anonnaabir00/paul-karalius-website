@@ -1,0 +1,48 @@
+@media only screen and (min-width: 600px) {
+    .desktop-menu {
+        width: 20%;
+        padding-left: 55px;
+        padding-top: 55px;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .desktop-menu {
+        display: none;
+      }
+
+      .mobile-menu {
+        background-color: #000000;
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+      }
+
+      .mobile-dropdown {
+        max-width: 480px;
+        margin: auto;
+        height: 500px;
+        color: white;
+        border-radius: 10px;
+        display: none;
+      }
+  }
+  
+  .desktop-menu a {
+    background-color: #ffffff; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .desktop-menu a:hover {
+    color: #c95eb8;
+  }
+
+  
