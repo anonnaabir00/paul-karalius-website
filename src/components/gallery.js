@@ -1,44 +1,54 @@
 import React, { Component } from "react";
 import { graphql, StaticQuery } from 'gatsby';
 
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
+import '../css/bootstrap.min.css';
+
 class Gallery extends Component {
     render(){
         return(
             <StaticQuery
             query={graphql`
-            query SiePortfolio {
-                allWordpressWpPortfolio {
-                  nodes {
-                    acf {
-                      project_name
-                      image {
-                        source_url
+            query SitePortfolioGallery {
+            allWordpressWpPortfolio {
+              edges {
+                node {
+                  acf {
+                    image {
+                      localFile {
+                        childImageSharp {
+                          fluid (webpQuality: 80, maxWidth:1458) {
+                            srcWebp
+                          }
+                        }
                       }
                     }
                   }
                 }
               }
+            }
+          }
+              
             `}
 
             render={data => (
-                <div>
-                <div class="responsive">
-                    <div class="gallery">
-                    {console.log ('Gallery Items')}
-                        {console.log (data.allWordpressWpPortfolio.nodes)}
-                        {data.allWordpressWpPortfolio.nodes.map(portfolio => {
-                            console.log(portfolio.acf.project_name)
-                            console.log(portfolio.acf.image.source_url)
+                  <div class="row flex image-works">
+                        {data.allWordpressWpPortfolio.edges.map(portfolio => {
                             return(
-                                <img src={portfolio.acf.image.source_url} alt={portfolio.acf.project_name} width="600" height="400" />
+                                  <div class="col-lg-4 col-md-4 col-sm-6">
+                                  <a target="_blank" href={portfolio.node.acf.image.localFile.childImageSharp.fluid.srcWebp}>
+                                  <div class="thumbnail">
+                                  <img src={portfolio.node.acf.image.localFile.childImageSharp.fluid.srcWebp} alt={portfolio.node.acf.project_name} width="100%" height="330" class='gallery-image' />
+                                  </div>
+                                  </a>
+                                  
+                                  </div>
                             )})}
-                        <a target="_blank" href="img_5terre.jpg">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="clearfix"></div>
             </div>
+            
             )}
               
             />
