@@ -6,7 +6,6 @@ import { graphql, StaticQuery } from 'gatsby';
 import '../css/bootstrap.min.css';
 import '../css/style.css';
 
-
 class Header extends Component {
   
   // responsiveTrack = () => {
@@ -39,8 +38,9 @@ class Header extends Component {
         }
         `}
         render={data => (
-          <div>
+          <div class="header-background">
           <div class="desktop-menu" id="header-navigation">
+          <img src="/static/35e33fd4c503f95ded189852dee49a38/05032/logo.jpg" />
             {data.allWordpressWpMenu.nodes.map(menus => {
               return(
                 <a href={menus.url}>{menus.title}</a>
@@ -55,7 +55,7 @@ class Header extends Component {
               )})}
             </ul>
             </div>
-  </div>
+            </div>
         )}
         />
 
