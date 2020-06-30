@@ -1,28 +1,11 @@
-* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
- 
-}
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
- 
-}
- 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
- 
-}
- 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-    
-}
-
 @media only screen and (min-width: 600px) {
     .desktop-menu {  
         padding-left: 40px;
         padding-top: 55px;
         position: fixed;
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+        line-height: 80%;
       }
 
       .mobile-menu {
@@ -81,7 +64,7 @@
  .col-2 {
    padding-left: 0px;
    padding-right: 0px;
-   background-color: #f6f6f6;
+   background-color: #ffffff;
  }
 
  .gallery-image {
@@ -98,5 +81,26 @@
   width: 100%;
   object-position: center;
  }
+
+ .footer-controls {
+  padding-left: 40px;
+  padding-top: 55px;
+  position: fixed;
+  bottom: 50px;
+  font-family: 'Nunito Sans';
+  font-size: 16px;
+  line-height: 80%;
+ }
+
+ .footer-controls a {
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer-controls a:hover {
+  color: #c95eb8;
+}
 
 
