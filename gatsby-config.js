@@ -41,6 +41,18 @@ module.exports = {
       }
     },
 
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito Sans`,
+            variants: [`400`, `600`]
+          },
+        ],
+      },
+    },
+
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     // this (optional) plugin enables Progressive Web App + Offline functionality
