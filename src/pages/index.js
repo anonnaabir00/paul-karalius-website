@@ -10,17 +10,16 @@ import Gallery from "../components/gallery";
 import CarouselSlider from "../components/carousel";
 
 import '../css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import Slider from "react-slick";
 
   
 
 class IndexPage extends Component {
     constructor(props) {
       super(props)
+      this.child = React.createRef();      
       this.state = {
-        output: <CarouselSlider />,
+        output: <CarouselSlider ref={this.child}/>,
       }
     }
   
@@ -29,15 +28,25 @@ class IndexPage extends Component {
     this.setState({output: <Gallery />})
   }
 
+  nextImage = () => {
+    this.child.current.nextSlide();
+  }
+
   render() {
     return (
       <div class="container-fluid">
           <div class="row flex">
           <div class="col-2">
           <Header />
-            <a href="#" onClick={this.changeView}>
-            <h4 class="fixed-bottom">SHOW THUMBNAILS</h4>
-            </a>
+          <div class="footer-controls">
+          <div class="col-8">
+          <a href="#" onClick={this.nextImage}>Next Slide</a>
+          <a href="#" onClick={this.changeView}>SHOW THUMBNAILS</a>
+          </div>
+          <div class="col-12">
+          <a href="#" onClick={this.nextImage}>Prev Slide</a>
+          </div>
+          </div>
           </div>
           <div class="col-10">
             {this.state.output}
