@@ -3,6 +3,7 @@
 
 import React, { Component } from "react";
 import { graphql, StaticQuery } from 'gatsby';
+import Logo from "../components/logo";
 import '../css/bootstrap.min.css';
 import '../css/style.css';
 
@@ -40,7 +41,7 @@ class Header extends Component {
         render={data => (
           <div class="header-background">
           <div class="desktop-menu" id="header-navigation">
-          <img src="/static/35e33fd4c503f95ded189852dee49a38/05032/logo.jpg" />
+          <Logo />
             {data.allWordpressWpMenu.nodes.map(menus => {
               return(
                 <a href={menus.url}>{menus.title}</a>
