@@ -21,7 +21,9 @@ class Logo extends Component {
         `}
             
         render={data => (
+            <a href="/">
             <img src={data.file.childImageSharp.fluid.srcWebp} />
+            </a>
         )}
 
         />
