@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { graphql, StaticQuery } from 'gatsby';
 
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
 import '../css/bootstrap.min.css';
 
 class Gallery extends Component {
