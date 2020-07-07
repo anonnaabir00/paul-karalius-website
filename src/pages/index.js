@@ -10,7 +10,6 @@ import Gallery from "../components/gallery";
 import CarouselSlider from "../components/carousel";
 
 import '../css/bootstrap.min.css';
-import Slider from "react-slick";
 
   
 
