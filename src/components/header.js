@@ -4,6 +4,7 @@
 import React, { Component } from "react";
 import { graphql, StaticQuery } from 'gatsby';
 import Logo from "../components/logo";
+import ProjectList from "./project-list.js";
 import '../css/bootstrap.min.css';
 import '../css/style.css';
 
@@ -35,8 +36,10 @@ class Header extends Component {
               title
               url
             }
-          }
+          },
+
         }
+
         `}
         render={data => (
           <div class="header-background">
@@ -46,6 +49,7 @@ class Header extends Component {
               return(
                 <a href={menus.url}>{menus.title}</a>
               )})}
+              <ProjectList />
           </div>
           <div class="mobile-menu">
             <a href="#" class="icon" onClick={this.showDropdown}>Menu</a>
