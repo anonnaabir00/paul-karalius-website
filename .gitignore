@@ -1,11 +1,8 @@
 /.cache
 /public
-/node_modules
 src/.DS_Store
 .DS_Store
 .DS_Store
-node_modules
-node_modules
 yarn.lock
 package-lock.json
 package-lock.json
