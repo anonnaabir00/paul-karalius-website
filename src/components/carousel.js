@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { graphql, StaticQuery } from 'gatsby';
 
-
-import Carousel from 'react-bootstrap/Carousel'
-
-import RBCarousel from "react-bootstrap-carousel";
 import '../css/bootstrap.css';
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
